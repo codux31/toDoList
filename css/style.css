@@ -1,0 +1,33 @@
+/* Style de la liste des tâches */
+ul li {
+    position: relative;
+    transition: 0.2s;
+    /* Les tâches sont non-selectionnables */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:hover {
+    background-color: #F8F9FA;
+}
+
+.checkbox {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.deleteTask {
+    margin-right: 5px;
+    background-color: white !important;
+}
+
+.deleteTask:hover {
+    background-color: #dc3546 !important;
+}
+
+.checked > .item {
+    text-decoration: line-through !important;
+    filter: blur(1px);
+}
