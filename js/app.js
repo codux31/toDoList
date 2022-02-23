@@ -86,10 +86,14 @@ function toggle(id) {
 
 // Fonction de suppression d'une tâche
 function deleteTask(id) {
-  tasks = tasks.filter(function (task) {
-    return task.id != id;
-  });
-  addToLocalStorage(tasks);
+
+  let deleteConfirm = window.confirm('Confirmer ?');
+  if (deleteConfirm) {
+    tasks = tasks.filter(function (task) {
+      return task.id != id;
+    });
+    addToLocalStorage(tasks);
+  }
 }
 
 // Récupérer les tâches stockées dans le localStorage
